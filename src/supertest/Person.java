@@ -7,6 +7,10 @@ public class Person{
         System.out.println("Person的普通方法");
     }
 
+    public Person(){
+
+    }
+
 
     public String toString(){
         return "Person的toString方法";

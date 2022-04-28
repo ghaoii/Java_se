@@ -4,7 +4,6 @@ public class China extends Person{
     public String name = "china";
 
     public China(){
-        super("父类");
         System.out.println("China的无参构造");
     }
 
