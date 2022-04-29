@@ -12,4 +12,9 @@ public class Person extends Animal {
         System.out.println(name);
         //System.out.println(age);error
     }
+
+    protected void show(){
+        System.out.println(name);
+    }
 }
+
