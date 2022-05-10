@@ -18,11 +18,11 @@ public class Main {
             int choice = user.menu();
             if(choice == -1){
                 System.out.println("系统退出");
+                return;
             }else{
                 user.doOperation(bookList, choice);
             }
         }
-
     }
 
     private static User login(){

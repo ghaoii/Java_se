@@ -7,6 +7,8 @@ package book_management.book;
  */
 
 public class Book {
+    //假设目前书名不会重复，因此对于书本来说，书名这个属性是唯一的
+    //因此所有对书籍的操作，都是根据书名这个属性来对应具体的书籍，相当于"索引"
     private String name;
     private String author;
     private Double price;

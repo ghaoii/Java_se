@@ -20,6 +20,7 @@ public class NormalUser extends User{
                 new ReturnOperation()
         };
     }
+
     @Override
     public int menu() {
         System.out.println("=================================");
