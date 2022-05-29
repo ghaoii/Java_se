@@ -83,7 +83,7 @@ public class BookList {
                 Book book = books.get(bookName.indexOf(name));
                 System.out.println("请输入修正后的书籍类型");
                 scanner.nextLine();
-                String type = scanner.nextLine();//直接跳过输入?????
+                String type = scanner.nextLine();
                 book.setType(type);
                 System.out.println("书籍类型已修正!");
                 return;
