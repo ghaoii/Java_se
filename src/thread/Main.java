@@ -15,6 +15,7 @@ public class Main {
         Thread thread = new Thread(runnableMethod);
         //启动线程
         thread.start();
+        thread.start();
         //执行主线程的语句
         System.out.println("主线程的输出结果");
     }

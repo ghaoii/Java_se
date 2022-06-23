@@ -3,7 +3,7 @@ package thread.safe;
 public class ThreadUnsafeDemo {
     private static class Counter {
         int count = 0;
-        void increase() {
+        synchronized void increase() {
             count++;
         }
     }
@@ -21,11 +21,11 @@ public class ThreadUnsafeDemo {
             }
         });
         t1.start();
-        t1.join();
         t2.start();
+        t1.join();
         t2.join();
         //主线程走到这里，t1和t2都执行完毕，按理说count应该为10_0000
-        System.out.println(counter.count);
+        System.out.println("count = " + counter.count);
     }
 }
 // 多次执行结果
