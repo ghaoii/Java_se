@@ -13,7 +13,7 @@ public class NonVolatile {
             // t1将flag加载到工作内存之后一直读取的是当前工作内存的值，t2的修改对t1是不可见的
             while(counter.flag == 0) {
                 // 关于这里添加了sleep方法之后，即使没有volatile关键字也被去读取主内存的值的原因
-                // 当有了sleep等类似方法的时候，CPU觉得该线程占着资源不合适，就会尝试读取主内存的值
+                // 当有了sleep、yield等类似方法的时候，当线程再次调度回CPU
                 // 不过这是概率事件，CPU不是百分百的会读取主内存中的值
                 // 因此，为了保证线程的安全，还是要使用volatile或synchronized等关键字
                 System.out.println("我在循环");
